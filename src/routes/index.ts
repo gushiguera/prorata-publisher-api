@@ -1,13 +1,11 @@
-import { Router } from 'express'
+import { Router } from "express";
 
-import { PREFIX_ROUTE } from '../core/url'; // Prefix Global route
+import { PREFIX_ROUTE } from "../core/url"; // Prefix Global route
 //* Routes *//
-import { userRoutes } from './user.routes';
-import { postRoutes } from './post.routes';
+import { publisherRoutes } from "./publishers.routes";
 
 const routes = Router();
 
-routes.use(`${PREFIX_ROUTE}/users`, userRoutes);
-routes.use(`${PREFIX_ROUTE}/posts`, postRoutes);
+routes.use(`${PREFIX_ROUTE}/publishers`, publisherRoutes);
 
-export { routes }
+export { routes };

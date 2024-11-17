@@ -1,2 +1,1 @@
-export { PrismaUserRepository } from './PrismaUserRepository'
-export { PrismaPostRepository } from './PrismaPostRepository';
+export { PrismaPostRepository } from "./PrismaPublisherRepository";

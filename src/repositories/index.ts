@@ -1,2 +1,1 @@
-export { IUserRepository } from './IUserRepository'
-export { IPostRepository } from './IPostRepository'
+export { IPublisherRepository } from "./IPublisherRepository";

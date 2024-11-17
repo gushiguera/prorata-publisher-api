@@ -1,2 +1,1 @@
-export { InMemoryUserRepository } from './InMemoryUserRepository'
-export { InMemoryPostRepository } from './InMemoryPostRepository'
+export { InMemoryPublisherRepository } from "./InMemoryPublisherRepository";

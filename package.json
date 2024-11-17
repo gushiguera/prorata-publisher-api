@@ -1,25 +1,24 @@
 {
-  "name": "api-node-prisma-ts-boilerplate",
+  "name": "prorata-publisher-api",
   "version": "1.0.0",
   "main": "index.js",
   "description": "",
   "license": "MIT",
   "author": {
-    "name": "Dedaldino Daniel",
-    "email": "dedaldinodev4@gmail.com",
-    "url": "https://github.com/dedaldinodev4/api-node-prisma-ts-boilerplate.git"
+    "name": "Gus Higuera",
+    "email": "gushiguera@gmail.com"
   },
   "keywords": [
-    "node", 
-    "jest", 
-    "prisma", 
-    "routes", 
-    "usecases", 
-    "repositories", 
+    "node",
+    "jest",
+    "prisma",
+    "routes",
+    "usecases",
+    "repositories",
     "middlewares"
-],
+  ],
   "scripts": {
-    "server:dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "server:dev": "prisma migrate deploy && ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
     "test:dev": "jest"
   },
   "dependencies": {

@@ -1,3 +1,2 @@
-export { IUser, IUserRequest } from './User'
-export { IPost, IPostRequest } from './Post'
-export { IResultPaginated } from './Pagination'
+export { IPublisher, IPublisherRequest } from "./Publisher";
+export { IResultPaginated } from "./Pagination";
