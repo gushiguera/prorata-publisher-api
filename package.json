@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "prestart": "npx prisma generate",
-    "start": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "start": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",
