@@ -1,37 +1,16 @@
 import { Router } from "express";
 
-import { createPostFactory } from "../usecases/Post/CreatePost/CreatePostFactory";
-import { findAllPostsFactory } from "../usecases/Post/FindAllPosts/FindAllPostsFactory";
-import { findByIdPostFactory } from "../usecases/Post/FindByIdPost/FindByIdPostFactory";
-import { updatePostFactory } from "../usecases/Post/UpdatePost/UpdatePostFactory";
-import { deletePostFactory } from "../usecases/Post/DeletePost/DeletePostFactory";
-import { publishPostFactory } from "../usecases/Post/PublishPost/PublishPostFactory";
+import { findAllPublishersFactory } from "../usecases/Publisher/FindAllPublishers/FindAllPublishersFactory";
+// import { findByIdPostFactory } from "../usecases/Publishers/FindByIdPost/FindByIdPostFactory";
 
 const publisherRoutes = Router();
 
-publisherRoutes
-  .route("/")
-  .post((request, response) => {
-    return createPostFactory().handle(request, response);
-  })
-  .get((request, response) => {
-    return findAllPostsFactory().handle(request, response);
-  });
-
-publisherRoutes
-  .route("/:id")
-  .get((request, response) => {
-    return findByIdPostFactory().handle(request, response);
-  })
-  .put((request, response) => {
-    return updatePostFactory().handle(request, response);
-  })
-  .delete((request, response) => {
-    return deletePostFactory().handle(request, response);
-  });
-
-publisherRoutes.route("/publish/:id").get((request, response) => {
-  return publishPostFactory().handle(request, response);
+publisherRoutes.route("/").get((request, response) => {
+  return findAllPublishersFactory().handle(request, response);
 });
+
+// publisherRoutes.route("/:id").get((request, response) => {
+//   return findByIdPostFactory().handle(request, response);
+// });
 
 export { publisherRoutes };

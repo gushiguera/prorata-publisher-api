@@ -2,7 +2,7 @@ import { PrismaPostRepository } from "../../../repositories/implementations/pris
 import { FindAllPublishersController } from "./FindAllPublishersController";
 import { FindAllPublishersUseCase } from "./FindAllPublishersUseCase";
 
-export const FindAllPublishersFactory = () => {
+export const findAllPublishersFactory = () => {
   const prismaPublisherRepository = new PrismaPostRepository();
   const findAllPublishersUseCase = new FindAllPublishersUseCase(
     prismaPublisherRepository
