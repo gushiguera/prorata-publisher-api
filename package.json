@@ -18,7 +18,7 @@
     "middlewares"
   ],
   "scripts": {
-    "server:dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "server:dev": "npx prisma generate ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
     "prestart": "npx prisma generate"
   },
   "dependencies": {
