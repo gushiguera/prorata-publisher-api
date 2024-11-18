@@ -18,7 +18,8 @@
     "middlewares"
   ],
   "scripts": {
-    "server:dev": "prisma migrate deploy && ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts"
+    "server:dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "prestart": "npx prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",
